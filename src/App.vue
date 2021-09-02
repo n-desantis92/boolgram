@@ -88,9 +88,9 @@ export default {
           li {
             padding: 3px;
             margin: 0 5px;
+            cursor: pointer;
             i {
               font-size: 22px;
-              cursor: pointer;
             }
             img {
               width: 25px;
