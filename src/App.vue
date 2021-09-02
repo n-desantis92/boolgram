@@ -18,13 +18,24 @@
       </div>
     </div>
     <main>
+      <div class="content-main">
+        <main-left>
+          <main-left-top>
+            
+          </main-left-top>
+        </main-left>
+        <main-right>
 
+        </main-right>
+      </div>
     </main>
   </div>
 </template>
 
 <script>
 import Search from "@/components/Search.vue"
+import MainLeft from './components/MainLeft.vue'
+import MainRight from './components/MainRight.vue'
 
 export default {
   name: 'app',
@@ -33,17 +44,19 @@ export default {
     }
   },
   components : {
-    Search
+    Search,
+    MainLeft,
+    MainRight,
   }
 }
 </script>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   .navigatore {
     width: 100%;
     border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
@@ -56,7 +69,6 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
 
       .logo {
         margin-left: 10px;
@@ -90,10 +102,29 @@ export default {
     }
   }
 
+  @media screen and (max-width: 1200px){
+    .navigatore {
+      
+      .container-nav {
+        width: 100%;
+      }
+    }
+}
+
+// MAIN
+
   main {
     background: rgba(var(--b3f,250,250,250),1);
     height: calc(100vh - 55px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .content-main {
+      width: 60%;
+      display: flex;
+    }
   }
+  
 </style>
 
 

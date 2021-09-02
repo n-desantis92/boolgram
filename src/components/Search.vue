@@ -49,6 +49,7 @@ export default {
         left: 0;
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         input {
           height: 100%;
@@ -63,6 +64,7 @@ export default {
         }
         i {
           cursor: pointer;
+          margin-right: 5px;
 
         }
       }
