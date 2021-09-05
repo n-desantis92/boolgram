@@ -4,11 +4,16 @@
         <h4>Suggerimenti per te</h4>
         <p>Mostra tutti</p>
         </div>
+        <div class="suggerimenti">
+            <profilo-suggerito></profilo-suggerito>
+        </div>
     </div>
 </template>
 
 <script>
+import ProfiloSuggerito from './Profilo-suggerito.vue'
 export default {
+  components: { ProfiloSuggerito },
     name: 'main-right-center',
     data() {
         
@@ -35,6 +40,9 @@ export default {
             h4 {
                 color: grey;
             }
+        }
+        .suggerimenti {
+            padding-top: 10px;
         }
     }
 </style>
