@@ -30,7 +30,7 @@ export default {
         height: 120px;
         border: 1px solid rgba(var(--b6a,219,219,219),1);
         border-radius: 3px;
-        margin-top: 40px;
+        margin-top: 85px;
         padding: 10px 0;
     }
 </style>

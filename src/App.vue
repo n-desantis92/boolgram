@@ -5,7 +5,7 @@
         <div class="logo">
           <img src="@/assets/logo.png" alt="logo instagram">
         </div>
-        <Search></Search>
+        <search></search>
         <nav>
           <ul>
             <li><i class="fas fa-home"></i></li>
@@ -58,7 +58,13 @@ export default {
     box-sizing: border-box;
   }
   .navigatore {
-    width: 100%;
+    width: calc(100% - 16px) ;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
     display: flex;
     justify-content: center;
@@ -115,10 +121,13 @@ export default {
 
   main {
     background: rgba(var(--b3f,250,250,250),1);
-    height: calc(100vh - 55px);
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
     .content-main {
       width: 60%;
       display: flex;

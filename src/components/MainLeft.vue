@@ -3,13 +3,15 @@
         <main-left-top>
 
         </main-left-top>
+        <post></post>
     </div>
 </template>
 
 <script>
 import MainLeftTop from './MainLeftTop.vue'
+import Post from './Post.vue'
 export default {
-  components: { MainLeftTop },
+  components: { MainLeftTop, Post },
     name: 'main-left',
     data() {
         
