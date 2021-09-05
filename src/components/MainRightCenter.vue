@@ -29,7 +29,6 @@ export default {
 
 <style lang="scss">
     .main-right-center {
-        background-color: rgb(255, 0, 0);
         width: 100%;
         height: 50%;
 
@@ -38,7 +37,7 @@ export default {
             justify-content: space-between;
             margin-top: 10px;
             h4 {
-                color: grey;
+                color: rgb(162, 162, 162);
             }
         }
         .suggerimenti {

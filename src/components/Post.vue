@@ -53,7 +53,6 @@ export default {
             justify-content: space-between;
 
             .cont-profilo {
-                background-color: rgb(34, 255, 0);
                 width: 30%;
                 height: 100%;
                 display: flex;

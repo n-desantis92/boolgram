@@ -2,14 +2,16 @@
     <div id="main-right" class="main-right">
         <main-right-top></main-right-top>
         <main-right-center></main-right-center>
+        <main-right-bottom></main-right-bottom>
     </div>
 </template>
 
 <script>
+import MainRightBottom from './MainRightBottom.vue'
 import MainRightCenter from './MainRightCenter.vue'
 import MainRightTop from './MainRightTop.vue'
 export default {
-  components: { MainRightTop, MainRightCenter },
+  components: { MainRightTop, MainRightCenter, MainRightBottom },
     name: 'main-right',
     data() {
         
@@ -25,7 +27,6 @@ export default {
 
 <style lang="scss">
     .main-right {
-        background-color: rgb(194, 194, 194);
         width: 20%;
         height: 100%;
         position: fixed;
