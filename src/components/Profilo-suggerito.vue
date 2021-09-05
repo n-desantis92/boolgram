@@ -45,7 +45,7 @@ export default {
             align-items: center;
             padding-left: 10px;
             .profilo {
-                width: 20%;
+                width: 18%;
                 overflow: hidden;
                 cursor: pointer;
                 img {
