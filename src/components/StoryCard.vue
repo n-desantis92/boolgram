@@ -48,8 +48,10 @@ export default {
         border-radius: 3px;
         margin-top: 85px;
         display: flex;
-        // flex-wrap: wrap;
+        flex-wrap: wrap;
         overflow: hidden;
+        padding: 0;
+        
         .card-story {
             width: calc(100% / 7.5);
             height: 100%;

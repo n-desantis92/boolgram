@@ -1,5 +1,5 @@
 <template>
-    <div id="main-left-top">
+    <div>
         <story-card></story-card>
     </div>
 </template>
@@ -23,5 +23,5 @@ export default {
 </script>
 
 <style lang="scss">
-
+    
 </style>
