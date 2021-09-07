@@ -19,15 +19,16 @@
 <script>
 export default {
     name: 'main-right-top',
+    props : {
+
+    },
     data() {
         
         return {
         }
     },
-    props : {
 
 
-    }
 }
 </script>
 

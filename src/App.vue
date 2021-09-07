@@ -37,6 +37,7 @@ import Search from "@/components/Search.vue"
 import MainLeft from './components/MainLeft.vue'
 import MainRight from './components/MainRight.vue'
 
+
 export default {
   name: 'app',
   data() {
