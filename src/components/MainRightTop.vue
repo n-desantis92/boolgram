@@ -5,8 +5,8 @@
                 <img src="@/assets/profile.jpg" alt="profilo">
             </div>
             <div class="name-profilo">
-                <h5>nome profilo</h5>
-                <p>nome</p>
+                <h5>{{profilo.username}}</h5>
+                <p>{{profilo.name}}</p>
             </div>
         </div>
 
@@ -25,7 +25,10 @@ export default {
     data() {
         
         return {
-            
+            profilo: {
+                name: 'Nicolas De santis',
+                username: 'dsn'
+            }
         }
     },
 
@@ -63,6 +66,9 @@ export default {
                 margin-left: 20px;
                 h5 {
                     font-size: 16px;
+                }
+                p {
+                    font-size: 14px;
                 }
 
             }

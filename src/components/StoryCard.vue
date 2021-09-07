@@ -76,8 +76,12 @@ export default {
             }
 
             p {
+                width: 100%;
                 font-size: 12px;
                 color: #262626;
+                text-align: center;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
         }
     }

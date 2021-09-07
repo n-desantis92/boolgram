@@ -60,7 +60,7 @@ export default {
         
         return {
             posts: [],
-            data: new Date()
+            data: new Date(),
         }
     },
     props : {
