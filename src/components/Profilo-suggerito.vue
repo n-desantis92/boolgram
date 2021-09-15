@@ -1,16 +1,16 @@
 <template>
     <div id="profilo-suggerito" class="content-sug">
-        <div class="cont-profilo">
+        <div class="cont-profilo" v-for="(suggerito,i) in this.suggeriti" :key="i">
             <div class="profilo">
-                <img src="@/assets/profile.jpg" alt="profilo">
+                <img :src="suggerito.foto" alt="profilo">
             </div>
             <div class="name-profilo">
-                <h5>nome profilo</h5>
-                <p>nome</p>
+                <h5>{{suggerito.nik}}</h5>
+                <p>{{suggerito.nome}}</p>
             </div>
-
+            <div class="cont-seg"><a href="#">Segui</a></div>
         </div>
-        <div class="cont-seg"><a href="#">Segui</a></div>
+        
     </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
     },
     props : {
 
-
+        suggeriti: Array
     }
 }
 </script>
@@ -34,24 +34,32 @@ export default {
 
     .content-sug {
         width: 100%;
-        height: calc(100% / 5);
+        height: 100%;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
         .cont-profilo {
-            width: 70%;
-            height: 70%;
+            position: relative;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 60px;
             display: flex;
             align-items: center;
             padding-left: 10px;
             .profilo {
                 width: 18%;
+                height: 80%;
                 overflow: hidden;
                 cursor: pointer;
                 img {
+                    height: 100%;
                     width: 100%;
-                    border-radius: 50%;
                     padding: 1px;
+                    border-radius: 50%;
+                    object-position: center;
+                    object-fit: cover;
                 }
             }
 
@@ -62,10 +70,13 @@ export default {
                 }
 
             }
-        }
-        .cont-seg {
-            a {
-                text-decoration: none;
+            .cont-seg {
+                position: absolute;
+                right: 0;
+                margin: 10px;
+                a {
+                    text-decoration: none;
+                }
             }
         }
     }

@@ -32,14 +32,19 @@
                 </div>
                 <div class="comments">
                     <strong>{{post.profile_fullname}}</strong> {{post.post_text}}
-                    <div class="comment" v-for="(comment,y) in post.comments" :key="y">
-                        <strong>{{comment.username}} </strong> {{comment.text}}
+                    <!-- comment -->
+                    <h5 @click="allComments()">Mostra tutti e {{post.comments.length}}  i commenti</h5>
+                    <div v-if="comment == true">
+                        <ul class="comment" v-for="(comment,y) in post.comments" :key="y">
+                            <li>
+                                <strong>{{comment.username}} </strong> {{comment.text}}
+                            </li>
+                        </ul>
                     </div>
-                    <h5>Mostra tutti e 4 i commenti</h5>
-                    <strong>ciccio</strong> i get.
+                    <!-- end comments -->
                 </div>
                 <div class="time">
-                    {{getOra(post.date)}}
+                    {{getHours(post.date.date)}} <span>ore fà</span>
                 </div>
                 <div class="add-comment">
                     <i class="far fa-smile"></i>
@@ -60,7 +65,7 @@ export default {
         
         return {
             posts: [],
-            data: new Date(),
+            comment: false,
         }
     },
     props : {
@@ -68,6 +73,7 @@ export default {
 
     },created() {
         this.getPost();
+
     },
     methods: {
         getPost() {
@@ -80,36 +86,26 @@ export default {
                 console.log(error);
             });
         },
-        getOra(data) {
-            console.log(data);
-            // const now = data;
+        getHours(date){
+     
+            let dt1 = new Date(date);
+            let dt2 = new Date();
+            let diff =(dt2.getTime() - dt1.getTime()) / 1000;
+            diff /= (60 * 60);
+            
+            return Math.abs(Math.round(diff));
+        },
 
-            // let delta = parseInt((now.getTime() - date) / 1000, 10);
-            // console.log(delta);
-            // delta = delta + (now.getTimezoneOffset() * 60);
-
-            // if(delta < 60) {
-            //     return 'less than a minute ago';
-            // }
-            // if(delta < 120) {
-            //     return 'about a minute ago';
-            // }
-            // if(delta < (60 * 60)) {
-            //     return `${parseInt(delta / 60, 10).toString()} minutes ago`;
-            // }
-            // if(delta < (120 * 60)) {
-            //     return 'about an hour ago';
-            // }
-            // if(delta < (24 * 60 * 60)) {
-            //     return `about ${parseInt(delta / 3600, 10).toString()} hours ago`; 
-            // }
-            // if(delta < (48 * 60 * 60)) {
-            //     return 'a day ago';
-            // }
-
-            // return `${parseInt(delta / 86400, 10).toString()} days ago`;
-
+        allComments(){
+            if (this.comment == false) {
+                this.comment = true;
+                console.log(this.comment);
+            }else if (this.comment == true) {
+                this.comment = false;
+                console.log(this.comment);
+            }
         }
+
     },
 }
 </script>
@@ -210,6 +206,10 @@ export default {
             }
             .comments {
                 padding: 0 20px;
+                h5 {
+                    cursor: pointer;
+                    margin: 10px 0;
+                }
             }
             .time {
                 padding: 10px 20px;

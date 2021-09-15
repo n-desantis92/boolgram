@@ -5,7 +5,7 @@
         <p>Mostra tutti</p>
         </div>
         <div class="suggerimenti">
-            <profilo-suggerito></profilo-suggerito>
+            <profilo-suggerito :suggeriti ="this.suggeriti"></profilo-suggerito>
         </div>
     </div>
 </template>
@@ -18,6 +18,23 @@ export default {
     data() {
         
         return {
+            suggeriti: [
+                {
+                    nome: 'Alvaro',
+                    nik: 'Soler',
+                    foto: 'https://www.camicissima.it/media/mageplaza/blog/post/c/a/camicissima_blog_trendy.jpg'
+                },
+                {
+                    nome: 'raimondo',
+                    nik: 'vianello',
+                    foto: 'https://biografieonline.it/img/bio/Raimondo_Vianello_1.jpg'
+                },
+                {
+                    nome: 'Jessica',
+                    nik: 'Alba',
+                    foto: 'https://www.amica.it/wp-content/uploads/2021/04/jessica-alba-oggi-GettyImages-1205621380.jpg'
+                },
+            ]
         }
     },
     props : {
