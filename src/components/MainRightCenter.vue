@@ -59,6 +59,7 @@ export default {
         }
         .suggerimenti {
             padding-top: 10px;
+            font-size: 13px;
         }
     }
 </style>
