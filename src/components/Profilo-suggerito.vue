@@ -49,8 +49,8 @@ export default {
             align-items: center;
             padding-left: 10px;
             .profilo {
-                width: 18%;
-                height: 80%;
+                width: 50px;
+                height: 50px;
                 overflow: hidden;
                 cursor: pointer;
                 img {
@@ -58,7 +58,6 @@ export default {
                     width: 100%;
                     padding: 1px;
                     border-radius: 50%;
-                    object-position: center;
                     object-fit: cover;
                 }
             }
