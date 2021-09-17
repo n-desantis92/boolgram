@@ -8,7 +8,7 @@
         </div>
         <div class="story" v-show="openStory">
             <div class="logo">
-                <img src="@/assets/logo.png" alt="logo boolgram">
+                <img src="@/assets/logo-white.png" alt="logo boolgram">
             </div>
             <div class="close" v-on:click="closeStory()">
                 <i  class="fas fa-times-circle" id="close"></i>
