@@ -7,11 +7,20 @@
             <p>{{storia.profile_name}}</p>
         </div>
         <div class="story" v-show="openStory">
+            <div class="logo">
+                <img src="@/assets/logo.png" alt="logo boolgram">
+            </div>
             <div class="close" v-on:click="closeStory()">
                 <i  class="fas fa-times-circle" id="close"></i>
             </div>
+            <div class="arrow" v-on:click="prevStory()">
+                <i class="fas fa-chevron-circle-left"></i>
+            </div>
             <div class="cont-img">
                 <img :src="pictures[index]">              
+            </div>
+            <div class="arrow" v-on:click="nextStory()">
+                <i class="fas fa-chevron-circle-right"></i>
             </div>
         </div>
     </div>
@@ -59,7 +68,22 @@ export default {
         openStoryMode(indice) {
             this.openStory = true;
             this.index = indice;
+        },
+        nextStory() {
+            if (this.index == (this.pictures.length - 1)) {
+                this.index = 0;
+            }else if (this.index < this.pictures.length) {
+                this.index ++;
+            }
+        },
+        prevStory() {
+            if (this.index == 0) {
+                this.index = (this.pictures.length - 1);
+            }else if (this.index <= this.pictures.length) {
+                this.index --;
+            }
         }
+        
     },
 }
 </script>
@@ -121,6 +145,23 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            .logo {
+                width: 150px;
+                position: absolute;
+                left: 20px;
+                top: 20px;
+                img {
+                    width: 100%;
+                    color: #fff;
+                }
+            }
+            .arrow {
+                font-size: 22px;
+                color: #fff;
+                cursor: pointer;
+                margin: 20px;
+            }
             .cont-img {
                 width: 30%;
                 height: 90%;
